@@ -17,6 +17,7 @@ public:
 
 private slots:
     void on_pushButton_clicked();
+        void on_lineEdit_3_returnPressed();
 
 private:
     Ui::Widget *ui;
