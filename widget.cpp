@@ -27,3 +27,13 @@ void Widget::on_pushButton_clicked()
         qDebug()<<"Submission Failed";
     }
 }
+void Widget::on_lineEdit_3_returnPressed()
+{
+    QRegularExpression re("^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$");
+    QRegularExpressionMatch match=re.match(ui->lineEdit_2->text());
+    bool hasMatch=match.hasMatch();
+    if(!hasMatch)
+    {
+        QMessageBox::information(this,"Nikhitha 6067","Invalid format");
+    }
+}
